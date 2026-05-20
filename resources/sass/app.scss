@@ -6,3 +6,304 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    font-family: 'Open sans', sans-serif;
+}
+
+/* utilis */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ow-hidden {
+    overflow: hidden;
+}
+
+/* header */
+.logo-header {
+    width: 80px;
+    min-width: 80px;
+    margin: 0;
+}
+
+header nav {
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header a {
+    border-bottom: 3px solid transparent;
+    padding: 20px 0;
+}
+
+header a.active,
+header a:hover {
+    color: #0282f9;
+    border-color: #0282f9;
+}
+
+/* main */
+.jumbo {
+    max-height: 350px;
+}
+
+.my-badge {
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.bg-comics {
+    background-color: #1c1c1c;
+}
+
+.card-image {
+    height: 110px;
+    overflow: hidden;
+}
+
+.btn-load-more {
+    display: block;
+    margin: 48px auto 0 auto;
+    border: none;
+}
+
+
+/* footer */
+.bg-blue {
+    background-color: #0282f9;
+}
+
+.shops-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shop-icons {
+    width: 40px;
+}
+
+.bg-footer-links {
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.footer-links-container {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links-container li>a {
+    color: #7d7d7d;
+    font-size: 14px;
+}
+
+.logo-footer-container {
+    position: relative;
+    z-index: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.logo-footer {
+    scale: 1.5;
+}
+
+.bg-dark-custom {
+    background-color: #303030;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social {
+    width: 32px;
+}
+
+.socials h2 {
+    color: #0282f9;
+}
+
+.signup-btn {
+    font-size: 20px;
+    border: 2px solid #0282f9;
+    padding: 5px 10px;
+}
+
+/* media query */
+@media screen and (min-width: 330px) {
+    .card-image {
+        height: 130px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .card-image {
+        height: 150px;
+    }
+
+    .logo-footer-container {
+        top: 100px;
+    }
+}
+
+@media screen and (min-width: 430px) {
+    .card-image {
+        height: 160px;
+    }
+
+    .footer-links-container {
+        flex-direction: column;
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .card-image {
+        height: 180px
+    }
+
+}
+
+@media screen and (min-width: 512px) {
+    header nav {
+        line-height: 40px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .header-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .logo-footer {
+        scale: 2;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .card-image {
+        height: 220px;
+    }
+
+    .socials {
+        flex-direction: row;
+    }
+
+    .logo-footer-container {
+        top: 70px;
+
+    }
+
+    .logo-footer {
+        scale: 1.8;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    header nav {
+        line-height: 80px;
+        gap: 30px;
+    }
+
+    .header-links {
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .shops-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo-footer-container {
+        top: 50px;
+    }
+
+    .logo-footer {
+        scale: 1.6;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .shops-list {
+        justify-content: flex-start;
+        gap: 60px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card-image {
+        height: 160px;
+    }
+
+    .shops-list {
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .logo-footer-container {
+        right: 100px;
+        top: 10px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .card-image {
+        height: 180px;
+    }
+
+}
