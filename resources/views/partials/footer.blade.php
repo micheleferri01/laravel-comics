@@ -1,3 +1,6 @@
+@php
+    $footermenus = config('footermenus');
+@endphp
 <footer class='position-relative'>
     <div class="bg-blue text-white py-4 position-relative">
         <section class="container py-3" id="shops">
@@ -13,9 +16,16 @@
     <div class='bg-footer-links text-white'>
         <div class="container d-flex justify-content-between align-items-center">
             <div class='pt-4 pb-2 footer-links-container'>
-
-                
-
+                @foreach($footermenus as $footermenu)
+                    <div>
+                        <h3 class="fs-4">{{$footermenu['title']}}</h3>
+                        <ul>
+                            @foreach($footermenu['links'] as $link)
+                                <li><a href="{{$link['url']}}">{{$link['text']}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endforeach
             </div>
             <figure class='logo-footer-container m-0'>
                 <img src="{{Vite::asset('resources/img/dc-logo-bg.png')}}" alt="dc-logo"  class='logo-footer'/>
