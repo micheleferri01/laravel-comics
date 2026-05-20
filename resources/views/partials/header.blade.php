@@ -4,7 +4,7 @@
             <figure class='logo-header'>
                 <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="Logo" class='img-fluid' />
             </figure>
-            <ul class="d-flex gap-3">
+            <ul class="header-links fw-bold m-0">
                 <li><a href="#">CHARACTERS</a></li>
                 <li><a href="#">COMICS</a></li>
                 <li><a href="#">MOVIES</a></li>
